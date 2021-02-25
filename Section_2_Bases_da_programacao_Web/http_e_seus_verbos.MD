@@ -1,4 +1,3 @@
-'''
 O protocolo HTTP define métodos para indicar a ação desejada a ser realizada
 no recurso identificado.
 
@@ -12,5 +11,3 @@ DELETE - Remover um recurso
 HEAD - solicita o cabeçalho do recurso
 OPTIONS - Mostra as funções/verbos aceitos pelo servidor
 
-
-'''
