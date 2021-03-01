@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>O m&iacute;nimo que voce precisa saber sobre o HTML</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="o-mínimo-que-voce-precisa-saber-sobre-o-html">O mínimo que voce precisa saber sobre o HTML</h1>
+<p>HTML -&gt; Hypertext Markup Language.</p>
+<p>Ao trabalhar com HTML, nós codificamos estruturas (tags e atributos)</br>
+para marcar a página de um site, por isso o HTML é chamado de linguagem</br>
+de marcação. Um arquivo HTML tem extensão  '.html'</p>
+<p>De forma geral, uma página web é dividida em 3 áreas principais:</br>
+header, body, footer</p>
+<p><strong>Header</strong>: usados para tags de informação sobre o site, aplicação de estilos</br>
+css, etc.
+<strong>Body</strong>: conteúdo do site que é apresentado ao cliente.</br></p>
+<p><strong>Footer</strong>: geralmente usado para carregamento de scripts JavaScript e</br>
+apresentação de dados de rodapé.</br>
+obs.: o footer fica dentro da área de conteúdo.</p>
+<p>Uma página web é renderizada pelo navegador de cima para baixo, linha a linha.</p>
+<h2 id="página-html-mínima">Página HTML Mínima</h2>
+<pre><code class="language-html"><div><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span> = <span class="hljs-string">&#x27;utf-8&#x27;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span> Geek Univesity - HTML 1 <span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> Programação Web com Django Framework<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+
+</div></code></pre>
+<blockquote>
+<p>Obs: podemos iniciar um servidor web simples com Python
+utilizando o comando:</p>
+</blockquote>
+<pre><code class="language-bash"><div>python3 -m http.server 8000
+<span class="hljs-comment"># utiliza esse -m para importar um módulo</span>
+</div></code></pre>
+<p>Obs:</p>
+<ul>
+<li>As tags HTML formam uma hierarquia de elementos.</li>
+<li>Algumas tagas abrem, mas não fecham.</li>
+</ul>
+<p>As tags HTML são subdivididas em dois grupos principais:</br>
+<strong>Elemento de bloco</strong>: Utilizam todo o espaço disponível e começam</br>
+uma nova linha no documento.
+Exemplo:</p>
+<pre><code class="language-html"><div><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+...
+<span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> - Divisões de seção de conteúdo
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> - paragrafo
+<span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span> - Bloco de citações
+<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span> - Listas ordenadas
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span> - Listas não ordenadas
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span> - Lista de itens
+
+</div></code></pre>
+<p><strong>Elemento em linha</strong>: Utilizam apenas o espaço necessário e não
+criam uma quebra de linha.</p>
+
+    </body>
+    </html>
