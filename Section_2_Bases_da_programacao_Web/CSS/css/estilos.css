@@ -1,0 +1,18 @@
+p {
+    background:navy;
+    color:white;
+}
+
+.verde{
+    color:green;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+span{
+    color:black;
+}
+
+#id_1 {
+    font-size: xx-large;
+}
