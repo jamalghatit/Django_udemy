@@ -44,3 +44,9 @@ Java, C#, Ruby, ou até mesmo JavaScript.
 
 ## Full-stack
 
+Quem trabalha tanto como frontend quanto como backend é conhecido como Fullstack
+Esse é o tempo de profissional mais completo, que pode entregar um projeto do início ao fim, 
+sem necessáriamente precisar de ajuda de outras pessoas para criar uma parte do sistema.
+
+De certa forma, é um profissional mais valorizado no mercado, especialmente se for realmente
+bom em front e backend.
