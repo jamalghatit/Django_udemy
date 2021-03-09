@@ -88,3 +88,22 @@ São muitas as propriedades e valores possíveis para formatação de uma págin
 formatar praticamente qualquer coisa, lembrando que estamos falando de aplicação de 
 estilos, que envolve escolher tipo/tamanho/cores de fonte, cores de página, alinhamento
 posicionamento de seções e etc. Programador backend sofre com essas coisas.
+
+Exemplo:
+```css
+
+body {
+  background-color: lightblue;
+}
+
+.classe {
+  color: white;
+  text-align: center;
+}
+
+#id_1 {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+```
