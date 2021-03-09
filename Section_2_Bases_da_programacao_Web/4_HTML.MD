@@ -9,10 +9,8 @@ de marcação. Um arquivo HTML tem extensão  '.html'
 De forma geral, uma página web é dividida em 3 áreas principais:</br>
 header, body, footer
 
-**Header**: usados para tags de informação sobre o site, aplicação de estilos</br>
-        css, etc.
+**Header**: usados para tags de informação sobre o site, aplicação de estilos css, etc.</br>
 **Body**: conteúdo do site que é apresentado ao cliente.</br>
-
 **Footer**: geralmente usado para carregamento de scripts JavaScript e</br>
             apresentação de dados de rodapé.</br>
             obs.: o footer fica dentro da área de conteúdo.
