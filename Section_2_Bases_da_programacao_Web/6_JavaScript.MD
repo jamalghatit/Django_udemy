@@ -11,9 +11,9 @@ principalmente pelos mais leigos, como JavaScript.
 O JavaScript completa a tríade da web se encarregando dos comportamentos
 e ações das páginas.
 
-HTML -> Estrutura
-CSS -> Estilo;
-JavaScript -> Comportamentos/ações;
+HTML -> Estrutura</br>
+CSS -> Estilo;</br>
+JavaScript -> Comportamentos/ações;</br>
 
 Obs: é aconselhavel colocar `<script type="text/javascript" src="js/scripts.js"></script>`
 no final do arquivo, pois evita de se ter erros, pois a página já foi toda renderizada.

@@ -1,5 +1,6 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Users\\jamal_ghatit\\envs\\curso_udemy\\Scripts\\python.exe",
 
 }
