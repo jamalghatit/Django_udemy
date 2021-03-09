@@ -11,9 +11,8 @@ header, body, footer
 
 **Header**: usados para tags de informação sobre o site, aplicação de estilos css, etc.</br>
 **Body**: conteúdo do site que é apresentado ao cliente.</br>
-**Footer**: geralmente usado para carregamento de scripts JavaScript e</br>
-            apresentação de dados de rodapé.</br>
-            obs.: o footer fica dentro da área de conteúdo.
+**Footer**: geralmente usado para carregamento de scripts JavaScript e apresentação de dados de rodapé.</br>
+> obs.: o footer fica dentro da área de conteúdo.
 
 Uma página web é renderizada pelo navegador de cima para baixo, linha a linha.
 
