@@ -1,11 +1,16 @@
+{% load static %} <!-- Toda página que irá carregar arquivos estáticos, tem que iniciar com isso.-->
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>Django 1 - Index</title>
+        <link rel="stylesheet" href="{% static 'css/estilos.css' %}"> <!--indicação de uso de css-->
     </head>
     <body>
         <h1>Index</h1>
+
+        <img src='{% static "images/django.png" %}'>
+
         <h2>{{ curso }}</h2>
         <h2>{{ outro }}</h2>
 
@@ -26,6 +31,9 @@
             {% endfor %}
             </tbody>
         </table>
+
+        <button onClick='teste();'>Clique me!</button>
+        <script type='text/javascript' src='{% static "js/script.js" %}'> </script>
 
     </body>
 </html>
