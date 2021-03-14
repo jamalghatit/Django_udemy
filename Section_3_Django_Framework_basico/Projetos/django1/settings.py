@@ -26,9 +26,9 @@ SECRET_KEY = 'yi^l5f*qgx#o^cd@=!lx(p92l!pgxanmi+0!!2+-9odv*prq96'
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True = modo desenvolvimento
 # DEBUG = FALSE = modo produção
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['django1-jg.herokuapp.com'] # Em qual domínio seria acessado, ex: www.geekuniversity.com.br
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

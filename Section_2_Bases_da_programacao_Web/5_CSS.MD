@@ -69,7 +69,7 @@ formatação. Na página html, é posto dentro da tag
 a palavra id='algumacoisa' e no arquivo css, o id é referenciada por
 \#algumacoisa (cerquilha e o nome da classe) e os atributos dentro de chaves {}
 
-## Anatomia de um comando CSS:
+## Anatomia de um comando CSS
 
 Um comando básico CSS é composto por seletor e declarações que contém
 propriedade e valor.

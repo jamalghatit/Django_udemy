@@ -1,0 +1,10 @@
+.pylintrc
+__pyc__
+.dist
+settings.json
+*.pyc
+venv/
+__pycache__/
+
+
+.vscode/settings.json

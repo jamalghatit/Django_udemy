@@ -1,8 +1,10 @@
+{% load static %} <!-- Toda página que irá carregar arquivos estáticos, tem que iniciar com isso.-->
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>{{ produto.nome }} </title>
+        <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     </head>
     <body>
         <h1>{{ produto.nome }}</h1>

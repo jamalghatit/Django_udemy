@@ -1,4 +1,5 @@
 # Protocolo HTTP
+
 O protocolo HTTP define métodos para indicar a ação desejada a ser realizada
 no recurso identificado.
 
