@@ -3,8 +3,9 @@ __pyc__
 .dist
 settings.json
 *.pyc
-venv/
+venv
 __pycache__/
 
 
 .vscode/settings.json
+
