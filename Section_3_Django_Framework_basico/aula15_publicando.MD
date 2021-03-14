@@ -168,3 +168,7 @@ fazer o push para a master no heroku
 $ git push heroku master
 
 ```
+
+Para verificar o logs do heroku:
+
+> $ heroku logs --tail
