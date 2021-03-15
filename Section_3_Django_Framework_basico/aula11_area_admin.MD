@@ -1,8 +1,8 @@
 # Área Admin
 
-Quando é feito a autenticação (django.contrib.auth), é criado uma sessão, criada pela aplicação sessions (django.contrib.sessions) e a troca de mensagens entra as aplicações 
+Quando é feito a autenticação (django.contrib.auth), é criado uma sessão, criada pela aplicação sessions (django.contrib.sessions) e a troca de mensagens entre as aplicações 
 gerenciada pelo messages ((django.contrib.messages). E é possível utilizar arquivos 
-estaticos como html, css, javascript por conta da aplicação staticfiles (django.contrib.staticfiles) e apresentar diferentes conteúdos devido ao contenttypes(django.contrib.contenttypes)
+estáticos como html, css, javascript por conta da aplicação staticfiles (django.contrib.staticfiles) e apresentar diferentes conteúdos devido ao contenttypes(django.contrib.contenttypes)
 
 Para criar um superusuário:
 
@@ -37,7 +37,7 @@ admin.site.register(Cliente)
 Depois de entrar na Admin e cadastrar os produtos,
 o nome deles aparece como:
 
-![admin](images\admin.PNG)
+![admin](images/admin.PNG)
 
 Para aparecer o nome que deseja, tem que ir em models e acrescentar 
 a função __str__:
@@ -67,7 +67,7 @@ class Cliente(models.Model):
 
 Recarregar a página:
 
-![admin](images\admin1.PNG)
+![admin](images/admin1.PNG)
 
 
 Caso queria que apareça outros campos na area admin,
