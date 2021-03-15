@@ -6,6 +6,16 @@ O Django trabalha no padrão MTV (Model, Template, View)
 O model é um modelo de dados. Com base nas classes definidas no models,
 o django cria tabelas no banco de dados.
 
+
+A model is the single, definitive source of information about your data. It contains the essential fields and behaviors of the data you’re storing.
+Generally, each model maps to a single database table.
+
+The basics:
+
+Each model is a Python class that subclasses django.db.models.Model.
+Each attribute of the model represents a database field.
+With all of this, Django gives you an automatically-generated database-access API;
+
 Projetos\core\models.py:
 
 ```python
