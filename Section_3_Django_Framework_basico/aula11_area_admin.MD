@@ -37,7 +37,7 @@ admin.site.register(Cliente)
 Depois de entrar na Admin e cadastrar os produtos,
 o nome deles aparece como:
 
-![admin](images\admin.PNG)
+![admin](images/admin.PNG)
 
 Para aparecer o nome que deseja, tem que ir em models e acrescentar 
 a função __str__:
@@ -67,7 +67,7 @@ class Cliente(models.Model):
 
 Recarregar a página:
 
-![admin](images\admin1.PNG)
+![admin](images/admin1.PNG)
 
 
 Caso queria que apareça outros campos na area admin,
