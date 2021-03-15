@@ -37,7 +37,7 @@ def contato(request):
     return render(request, 'contato.html')
 ```
 
-Criar rotas para as views:
+Criar rotas para as views (urls.py):
 
 ```python
 from django.urls import path
