@@ -1,5 +1,6 @@
 # Arquivo Settings.py
 
+```python
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -19,6 +20,7 @@ TEMPLATES = [
         },
     },
 ]
+```
 
 Para rodar o servidor:
 
