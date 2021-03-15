@@ -2,7 +2,7 @@
 
 Quando é feito a autenticação (django.contrib.auth), é criado uma sessão, criada pela aplicação sessions (django.contrib.sessions) e a troca de mensagens entre as aplicações 
 gerenciada pelo messages ((django.contrib.messages). E é possível utilizar arquivos 
-estaticos como html, css, javascript por conta da aplicação staticfiles (django.contrib.staticfiles) e apresentar diferentes conteúdos devido ao contenttypes(django.contrib.contenttypes)
+estáticos como html, css, javascript por conta da aplicação staticfiles (django.contrib.staticfiles) e apresentar diferentes conteúdos devido ao contenttypes(django.contrib.contenttypes)
 
 Para criar um superusuário:
 
