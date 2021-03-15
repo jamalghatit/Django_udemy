@@ -1,11 +1,5 @@
-.pylintrc
-__pyc__
-.dist
-settings.json
-*.pyc
 venv
-__pycache__/
-
-
+**/__pycache__
+*.pyc
 .vscode/settings.json
 

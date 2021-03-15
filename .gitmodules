@@ -1,0 +1,3 @@
+[submodule "django1-jg"]
+	path = django1-jg
+	url = https://git.heroku.com/django1-jg.git
