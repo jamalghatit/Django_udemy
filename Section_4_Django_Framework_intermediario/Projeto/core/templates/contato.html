@@ -1,10 +1,25 @@
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <title>Contato</title>
     <meta charset="utf-8">
+    {% bootstrap_css %}
   </head>
   <body>
-        <h1>Contato</h1>
+    <div class='container'>
+    <h1>Contato</h1>
+    {% bootstrap_messages %}
+
+      <form action="{% url 'contato' %}" method='POST' class='form' autocomplete='off'>
+        {% csrf_token %}
+        {% bootstrap_form form%} # <!-- esse é o contexto form passado na view.py-->
+        {% buttons %}
+        <!-- -->
+          <button type='submit' class='btn btn-primary'>Enviar Mensagem</button>
+        {% endbuttons %}
+      </form>
+    </div>
+{% bootstrap_javascript jquery='full'%}
 </body>
 </html>
