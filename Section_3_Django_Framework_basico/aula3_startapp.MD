@@ -5,7 +5,7 @@ $ django_admin startapp core
 core/migrations -> Histórico das migrações do banco de dados</br>
 core/admin.py -> Administração do site django.</br>
 core/models.py -> é o arquivo onde serão criados os modelos de dados, classes que terão
-seus dados persistido      s no DB ou no projeto</br>
+seus dados persistidos no DB ou no projeto</br>
 core/tests.py -> criação de testes.</br>
 core/views.py -> onde será criado as views (funções) para definir as visões.</br>
 </br>
