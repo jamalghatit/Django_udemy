@@ -104,8 +104,38 @@ Dentro da pasta migrations, é arquivado toda migração realizada, tendo assim 
 historico. Caso precise desfazer alguma modificação, é possível escolher de qual ponto
 se deseja voltar.
 
+
 Depois de criar a migrations, é necessário aplicá-la:
 `python manage.py migrate`
+
+Para verificar as migrations realizadas:
+
+```python
+$ python manage.py showmigrations core
+core
+ [X] 0001_initial
+ [X] 0002_cliente
+(venv) 
+```
+
+Para retornar a uma migração:
+
+```python
+$ python manage.py migrate core 0001_initial
+Operations to perform:
+  Target specific migration: 0001_initial, from core
+Running migrations:
+  Rendering model states... DONE
+  Unapplying core.0002_cliente... OK
+(venv) 
+
+$ python manage.py showmigrations core
+core
+ [X] 0001_initial
+ [ ] 0002_cliente
+(venv) 
+
+```
 
 Outro modelo em models.py:
 
