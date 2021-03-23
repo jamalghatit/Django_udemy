@@ -33,7 +33,7 @@ def contato(request):
         'form' : form
     }
     return render(request, 'contato.html', context=context)
-    
+
     ```
 
 Adcionar modificação no template/contato.html:
@@ -126,13 +126,13 @@ def contato(request):
             print(f'{form})
 
             messages.success(request, 'Email enviado com sucesso!')
-            form = ContatoForms() # aqui ele vai "resetar" a variavel 
+            form = ContatoForms() # aqui ele vai "resetar" a variavel
 
         else:
             messages.error(request, 'Erro ao enviar e-mail')
     """
     Tudo aquilo que quiser enviar no contexto do template,
-    é colocado nesse dicionário 
+    é colocado nesse dicionário
     """
     context = {
         'form' : form
@@ -155,8 +155,9 @@ Console shell do django(python manage.py shell):
 
 >>> from django import forms
 >>> dir(forms.Form)
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__html__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_clean_fields', '_clean_form', '_html_output', '_post_clean', 'add_error', 'add_initial_prefix', 'add_prefix', 'as_p', 'as_table', 'as_ul', 'base_fields', 'changed_data', 'clean', 'declared_fields', 'default_renderer', 'errors', 'field_order', 'full_clean', 'get_initial_for_field', 'has_changed', 'has_error', 'hidden_fields', 'is_multipart', 'is_valid', 'media', 
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__html__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_clean_fields', '_clean_form', '_html_output', '_post_clean', 'add_error', 'add_initial_prefix', 'add_prefix', 'as_p', 'as_table', 'as_ul', 'base_fields', 'changed_data', 'clean', 'declared_fields', 'default_renderer', 'errors', 'field_order', 'full_clean', 'get_initial_for_field', 'has_changed', 'has_error', 'hidden_fields', 'is_multipart', 'is_valid', 'media',
 'non_field_errors', 'order_fields', 'prefix', 'use_required_attribute', 'visible_fields']
+
 >>> help(forms.Form.is_valid)
 Help on function is_valid in module django.forms.forms:
 
