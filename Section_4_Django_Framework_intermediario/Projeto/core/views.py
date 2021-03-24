@@ -1,13 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 # adiciona mensagens no contexto da pagina
 # aparece essas mensagens na pagina quando declarado
 # na pagina {% bootstrap_messages %}
 
 from .forms import ContatoForms, ProdutoModelForm
+from  .models import Produto
 
 def index(request):
-    return render(request, 'index.html')
+    context ={
+        'produtos': Produto.objects.all()
+    }
+    return render(request, 'index.html', context=context)
 
 def contato(request):
     form = ContatoForms(request.POST or None)
@@ -29,19 +33,20 @@ def contato(request):
     return render(request, 'contato.html', context=context)
 
 def produto(request):
-    if str(request.method) == 'POST':
-        form = ProdutoModelForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Produto salvo com sucesso')
-            form = ProdutoModelForm()
+    if str(request.user) != 'AnonymousUser':
+        if str(request.method) == 'POST':
+            form = ProdutoModelForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Produto salvo com sucesso')
+                form = ProdutoModelForm()
+            else:
+                messages.error(request, 'Erro ao salvar produto')
         else:
-            messages.error(request, 'Erro ao salvar produto')
+            form = ProdutoModelForm()
+        context = {
+            'form':form
+        }
+        return render(request, 'produto.html', context=context)
     else:
-        form = ProdutoModelForm()
-    
-    context = {
-        'form':form
-    }
-    return render(request, 'produto.html', context=context)
-
+        return redirect('index')

@@ -1,3 +1,21 @@
+# Apresentando dados do banco de dados no template
+
+core/view.py:
+
+```python
+
+from  .models import Produto
+
+def index(request):
+    context ={
+        'produtos': Produto.objects.all()
+    }
+    return render(request, 'index.html', context=context)
+```
+
+core/templates/index.html:
+
+```html
 {% load bootstrap4 %}
 {% load static %}
 <!DOCTYPE html>
@@ -52,3 +70,14 @@
   {% bootstrap_javascript jquery='full' %}
 </body>
 </html>
+```
+
+core/static/css:
+
+```css
+
+a{
+    color:white;
+}
+
+```
