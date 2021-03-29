@@ -229,3 +229,22 @@ urlpatterns = [
 ]
 
 ```
+----
+
+Websites generally need to serve additional files such as images, JavaScript, or CSS. In Django, we refer to these files as “static files”. Django provides django.contrib.staticfiles to help you manage them.
+
+This page describes how you can serve these static files.</br>
+
+> Configuring static files</br>
+Make sure that django.contrib.staticfiles is included in your INSTALLED_APPS.</br>
+
+In your settings file, define STATIC_URL, for example:</br>
+
+`STATIC_URL = '/static/'`
+
+In your templates, use the static template tag to build the URL for the given relative path using the configured STATICFILES_STORAGE.
+
+```python
+{% load static %}
+<img src="{% static 'my_app/example.jpg' %}" alt="My image">
+```
