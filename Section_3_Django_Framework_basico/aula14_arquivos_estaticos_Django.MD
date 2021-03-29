@@ -121,7 +121,7 @@ Há outra ferramenta para isso.
 
 --------------
 
-Tratar o erro de pagina não existe:
+Tratar o erro de pagina não existente:
 
 No arquivo **views.py** (Projetos\core\urls.py):
 

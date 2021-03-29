@@ -29,7 +29,7 @@ MIDDLEWARE = [
 Criar um arquivo na raiz do projeto chamado .gitignore (Projetos):
 
 > arquivos começados com ~ (til) são arquivos temporários.
-> .pyc -> arquivos complilados python
+> .pyc -> arquivos compilados python
 
 ```text
 __pycache__
