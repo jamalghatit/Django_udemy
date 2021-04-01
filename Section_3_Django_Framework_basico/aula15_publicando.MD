@@ -29,7 +29,7 @@ MIDDLEWARE = [
 Criar um arquivo na raiz do projeto chamado .gitignore (Projetos):
 
 > arquivos começados com ~ (til) são arquivos temporários.
-> .pyc -> arquivos complilados python
+> .pyc -> arquivos compilados python
 
 ```text
 __pycache__
@@ -70,7 +70,7 @@ $ git commit -m 'Projeto finalizado' # Record changes to the repository
 
 Acessar o site [Heroku.com](https://www.heroku.com/) e se cadastrar.
 
-Fazer o download do CLI do heroku em [Heroku] (https://devcenter.heroku.com/articles/getting-started-with-python#set-up)
+Fazer o download do CLI do heroku em [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#set-up)
 
 Depois criar um arquivo na raiz do projeto chamado runtime.txt e  no arquivo, colocar a 
 versão do python utilizada no projeto.
