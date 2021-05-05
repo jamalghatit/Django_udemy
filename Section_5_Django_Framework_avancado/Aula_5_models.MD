@@ -1,10 +1,19 @@
-﻿import uuid
+# Definindo os models
+
+Em Section_5_Django_Framework_avancado\Projeto\core\models.py:
+
+```python
+import uuid
 
 from django.db import models
 
 from stdimage.models import StdImageField
 
+
 def get_file_path(_instance, filename):
+    """
+    Essa função vai gerar nomes aleatórios para o arquivo.
+    """
     ext = filename.split('.')[-1]
     filename = f'{uuid.uuid4()}.{ext}'
     return filename
@@ -64,3 +73,33 @@ class Team(Base):
     class Meta:
         verbose_name = 'Team'
         verbose_name_plural = 'Teams'
+```
+
+- No bash:
+
+```bash
+
+python manage.py makemigrations
+python manage.py migrate
+
+```
+
+- Em Section_5_Django_Framework_avancado\Projeto\core\admin.py:
+
+```python
+from django.contrib import admin
+
+from .models import Role, Service, Team
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('services', 'icon', 'active', 'modified')
+    
+@admin.register(Role)
+class RoleAdmin(admin.ModelAdmin):
+    list_display = ('role', 'active', 'modified')
+
+@admin.register(Team)
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ('name', 'role', 'active', 'modified')
+
+```
