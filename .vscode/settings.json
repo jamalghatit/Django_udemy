@@ -1,7 +1,7 @@
 {
     "python.linting.pylintEnabled": false,
     "python.linting.enabled": false,
-    "python.pythonPath": "C:\\Program Files\\Python39\\python.exe",
+    "python.pythonPath": "Section_5_Django_Framework_avancado\\Projeto\\venv\\Scripts\\python.exe",
     "python.linting.flake8Enabled": true,
 
 }
