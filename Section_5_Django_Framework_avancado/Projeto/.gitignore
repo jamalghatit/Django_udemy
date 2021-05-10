@@ -5,3 +5,4 @@ venv
 .vscode/settings.json
 venv/
 template/*
+htmlcov/*
