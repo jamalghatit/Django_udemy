@@ -12,3 +12,4 @@ omit =
      */admin.py
      */migrations/*
      */tests/*
+     */venv/*

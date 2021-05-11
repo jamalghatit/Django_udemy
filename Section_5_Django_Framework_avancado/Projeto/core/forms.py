@@ -14,7 +14,7 @@ class ContactForm(forms.Form):
         subject = self.cleaned_data['subject']
         message = self.cleaned_data['message']
 
-        body = f'Name: {name}\nE-mail:{email}\Subject: {subject}\n\
+        body = f'Name: {name}\nE-mail:{email}\nSubject: {subject}\n\
                     Message: {message}'
         mail = EmailMessage(
             subject=subject,

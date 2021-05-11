@@ -1,3 +1,8 @@
+# Testando Formulários
+
+Em Projeto\core\tests\test_forms.py:
+
+```python
 from django.test import TestCase
 from model_mommy import mommy
 from ..forms import ContactForm
@@ -33,3 +38,28 @@ class ContactFromTestCase(TestCase):
         res2 = form2.send_email()
 
         self.assertEqual(res1, res2)
+```
+
+Rodando os testes
+
+```bash
+
+$ coverage run manage.py test && coverage report -m && coverage html&& cd 'htmlcov/' && python -m http.server && cd ..
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.248s
+
+OK
+Destroying test database for alias 'default'...
+Name             Stmts   Miss  Cover   Missing
+----------------------------------------------
+core\forms.py       15      0   100%
+core\models.py      43      0   100%
+core\views.py       23      9    61%   14-17, 20-22, 25-26
+----------------------------------------------
+TOTAL               81      9    89%
+Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+
+```

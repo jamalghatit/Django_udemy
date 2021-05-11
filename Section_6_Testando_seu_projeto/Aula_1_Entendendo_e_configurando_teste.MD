@@ -44,8 +44,8 @@ Destroying test database for alias 'default'...
 
 ```
 
-Apagar o arquivo test.py e criar um diretório tests em 
-Projeto\core, e criar um arquivo chamado \_\_init\_\_, 
+Apagar o arquivo test.py e criar um diretório tests em
+Projeto\core, e criar um arquivo chamado \_\_init\_\_,
 indicando para o python que esse diretório é um pacote python.
 E dentro dessa pasta, criar um arquivo de teste para cada classe.
 
@@ -69,7 +69,7 @@ Criar um arquivo chamado .coveragerc:
 [run]
 source = .
 
-omit = 
+omit =
      */__init__.py
      */settings.py
      */manage.py
@@ -115,7 +115,7 @@ TOTAL               79     21    73%
 Ir em Projeto\.gitignore para ignorar o arquivos da pasta htmlcov:
 
 ```text
-htmlcov/* 
+htmlcov/*
 
 ```
 
