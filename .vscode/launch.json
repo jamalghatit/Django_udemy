@@ -4,12 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         
         {
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}\\Section_5_Django_Framework_avancado\\Projeto\\manage.py", 
+            "program": "${workspaceFolder}\\Section_7_Djanto_User_Model\\Projeto\\django_user_model\\manage.py",
             "args": [
                 "runserver"
             ],
