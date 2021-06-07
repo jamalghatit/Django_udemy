@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-07 10:34-0300\n"
+"PO-Revision-Date: 2021-06-07 10:32-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: .\core\forms.py:6 .\core\forms.py:17 .\core\models.py:52
+msgid "Name"
+msgstr "Nome"
+
+#: .\core\forms.py:7 .\core\forms.py:18
+msgid "E-mail"
+msgstr "E-mail"
+
+#: .\core\forms.py:8 .\core\forms.py:19
+msgid "Subject"
+msgstr "Oggetto"
+
+#: .\core\forms.py:9 .\core\forms.py:20
+msgid "Message"
+msgstr "Messaggio"
+
+#: .\core\models.py:14
+msgid "Created"
+msgstr "Creato"
+
+#: .\core\models.py:15
+msgid "Modified"
+msgstr "Modificato"
+
+#: .\core\models.py:16
+msgid "Active?"
+msgstr "Attivo?"
+
+#: .\core\models.py:23
+msgid "Gear"
+msgstr "Marcia"
+
+#: .\core\models.py:24
+msgid "Graphic"
+msgstr "Grafica"
+
+#: .\core\models.py:25
+msgid "Users"
+msgstr "Utenti"
+
+#: .\core\models.py:26
+msgid "Design"
+msgstr "Design"
+
+#: .\core\models.py:27
+msgid "Mobile"
+msgstr "Cellulare"
+
+#: .\core\models.py:28
+msgid "Rocket"
+msgstr "Razzo"
+
+#: .\core\models.py:30 .\core\models.py:36 .\core\templates\base.html:49
+msgid "Services"
+msgstr "Servizi"
+
+#: .\core\models.py:31
+msgid "Description"
+msgstr "Descrizione"
+
+#: .\core\models.py:32
+msgid "Icon"
+msgstr "Icona"
+
+#: .\core\models.py:35
+msgid "Service"
+msgstr "Servizio"
+
+#: .\core\models.py:42 .\core\models.py:45
+msgid "Role"
+msgstr "Ruolo"
+
+#: .\core\models.py:46
+msgid "Roles"
+msgstr "Ruoli"
+
+#: .\core\models.py:56
+msgid "Image"
+msgstr "Immagine"
+
+#: .\core\models.py:66 .\core\templates\base.html:54
+msgid "Team"
+msgstr "Squadra"
+
+#: .\core\models.py:67
+msgid "Teams"
+msgstr "Squadre"
+
+#: .\core\templates\404.html:13
+msgid "Página não encontrada"
+msgstr "Pagina non trovata"
+
+#: .\core\templates\404.html:14
+msgid "Infelizmente a página que você procura não está disponível"
+msgstr "Purtroppo la pagina che stai cercando non è disponibile."
+
+#: .\core\templates\404.html:16 .\core\templates\500.html:15
+msgid "Voltar para página inicial"
+msgstr "Torna alla home page"
+
+#: .\core\templates\500.html:12
+msgid "Erro de processamento"
+msgstr "Errore di elaborazione"
+
+#: .\core\templates\base.html:44
+msgid "Home"
+msgstr "Inizio"
+
+#: .\core\templates\base.html:59
+msgid "Pricing"
+msgstr "Prezzo"
+
+#: .\core\templates\base.html:64
+msgid "Testimonial"
+msgstr "Testimonial"
+
+#: .\core\templates\base.html:69
+msgid "Contact"
+msgstr "Contatto"
+
+#: .\core\templates\hero.html:9
+msgid "Aí Jessusssss!!!"
+msgstr "Gesù aiutami!"
+
+#: .\core\templates\hero.html:9
+msgid "<br>Landing Page Template"
+msgstr "Modello di pagina di destinazione"
+
+#: .\core\templates\hero.html:10
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus "
+"quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! fuga "
+"nesciunt dolorum nulla magnam veniam sapiente, fugiat!"
+msgstr ""
+
+#: .\core\templates\hero.html:12
+msgid "Download Now"
+msgstr "Scarica ora"
+
+#: .\core\templates\hero.html:13
+msgid "Learn More"
+msgstr "Per saperne di più"
+
+#: .\core\views.py:26
+msgid "E-mail enviado com sucesso"
+msgstr "Email inviata con successo"
+
+#: .\core\views.py:30
+msgid "Erro ao enviar e-mail"
+msgstr "Errore nell'invio dell'e-mail"

@@ -1,6 +1,7 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="{{ lang }}">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -38,34 +39,34 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
-              <li class="nav-item active">
+              <li class="nav-item active"> 
                 <a class="nav-link" href="#hero-area">
-                  Home
+                  {% trans 'Home' %}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#services">
-                  Services
+                  {% trans 'Services' %}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#team">
-                  Team
+                  {% trans 'Team' %}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#pricing">
-                  Pricing
+                  {% trans 'Pricing' %}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#testimonial">
-                  Testimonial
+                  {% trans 'Testimonial' %}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact">
-                  Contact
+                  {% trans 'Contact' %}
                 </a>
               </li>
             </ul>
