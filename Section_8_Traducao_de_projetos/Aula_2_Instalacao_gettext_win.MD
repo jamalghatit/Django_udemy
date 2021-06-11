@@ -31,6 +31,7 @@ $ brew install gettext
 
 $ brew link gettext --force
 ```
+
 Instalar o poedit, por meio de download no site
 O gettext é necessário para que o django consiga alternar entre as traduções.
 O poedit é um editor de traduções.

@@ -1,1 +1,5 @@
 Section_7_Djanto_User_Model/venv/*
+Section_9_Relacionamento_entre_modelos/django_orm/venv/*
+
+Section_9_Relacionamento_entre_modelos/django_orm/core/__pycache__/*
+Section_9_Relacionamento_entre_modelos/django_orm/django_orm/__pycache__/*
