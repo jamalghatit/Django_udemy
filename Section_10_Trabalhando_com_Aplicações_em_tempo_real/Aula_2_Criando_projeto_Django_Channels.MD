@@ -3,7 +3,7 @@
 Criar um ambiente virtual e instalar:
 
 ```bash
-pip install django django-channels django-bootstrap4 channels-redis
+pip install django channels django-bootstrap4 channels-redis
 django-admin startproject realtime .
 django-admin startapp chat
 ```

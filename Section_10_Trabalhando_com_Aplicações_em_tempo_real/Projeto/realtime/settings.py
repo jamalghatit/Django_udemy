@@ -32,9 +32,9 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'chat',
     'bootstrap4',
     'channels',
-    'chat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,6 +128,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Especifica do Channels
 # ASGI é para aplicações em tempo real, o WSGI não suporta esse tipo de operação.
+
 ASGI_APPLICATION = 'realtime.routing.application'
 
 CHANNEL_LAYERS = {

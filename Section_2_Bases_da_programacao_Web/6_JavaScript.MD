@@ -51,7 +51,6 @@ Exemplo HTML:
 
 ```
 
-
 Exemplo JavaScript:
 
 ```javascript
