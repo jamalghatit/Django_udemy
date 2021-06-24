@@ -1,5 +1,8 @@
 Section_7_Djanto_User_Model/venv/*
 Section_9_Relacionamento_entre_modelos/django_orm/venv/*
 
-Section_9_Relacionamento_entre_modelos/django_orm/core/__pycache__/*
-Section_9_Relacionamento_entre_modelos/django_orm/django_orm/__pycache__/*
+Section_9_Relacionamento_entre_modelos/django_orm/core/__pycache__
+Section_9_Relacionamento_entre_modelos/django_orm/django_orm/__pycache__
+Section_10_Trabalhando_com_Aplicações_em_tempo_real/Projeto/venv/*
+Section_10_Trabalhando_com_Aplicações_em_tempo_real/Projeto/chat/__pycache__/*
+Section_10_Trabalhando_com_Aplicações_em_tempo_real/Projeto/realtime/__pycache__
