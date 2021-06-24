@@ -75,6 +75,7 @@ Section_10_Trabalhando_com_Aplicações_em_tempo_real\Projeto\chat\templates\sal
             'ws://' + window.location.host +
             '/ws/chat/' + nome_sala + '/'
         );
+        // The window.location.host property returns the name of the internet host (of the current page).
 
         chatSocket.onmessage = function(e){
             var dados = JSON.parse(e.data);
