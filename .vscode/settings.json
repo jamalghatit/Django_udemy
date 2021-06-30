@@ -1,7 +1,7 @@
 {
     "python.linting.pylintEnabled": false,
     "python.linting.enabled": false,
-    "python.pythonPath": "Section_10_Trabalhando_com_Aplicações_em_tempo_real\\venv\\Scripts\\python.exe",
+    "python.pythonPath": "C:\\Program Files\\Python39\\python.exe",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintArgs": ["--load-plugins=pylint_django", ],
 }

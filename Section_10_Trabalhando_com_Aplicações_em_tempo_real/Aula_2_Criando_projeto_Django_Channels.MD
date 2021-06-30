@@ -65,8 +65,18 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': ['192.168.15.15', 6379]
-        }
-    }
+            'hosts': [('192.168.15.27', 6379)]
+        },
+    },
+
 }
 ```
+
+No linux onde fora instalado o redis-server `apt-get install redis-server`
+Abra o arquivo de configuração /etc/redis/redis.conf e altere para:
+
+bind 0.0.0.0 ::1
+protected-mode no
+
+e depois o inicie no bash:
+`redis-server --protected-mode no`
