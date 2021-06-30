@@ -1,3 +1,9 @@
+# Criando views
+
+Em Section_11_Geolocalização\geo\core\views.py:
+
+```python
+
 from django.shortcuts import render
 from django.views.generic import View
 
@@ -33,3 +39,5 @@ class IndexView(View):
                 'busca': True,
             }
         return render(request, 'index.html', context)
+
+```
