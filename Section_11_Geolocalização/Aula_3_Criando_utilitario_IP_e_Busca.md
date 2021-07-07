@@ -29,7 +29,7 @@ def get_client_data():
     ip = get_random_ip()
     try:
         return g.city(ip)
-    except  geoip2.error.AddressNotFoundError:
+    except  geoip2.errors.AddressNotFoundError::
         return None
 
 def get_random_ip():
