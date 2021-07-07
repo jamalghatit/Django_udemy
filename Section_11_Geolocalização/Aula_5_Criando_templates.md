@@ -40,58 +40,58 @@ Criar arquivo base.html (Section_11_Geolocalização\geo\core\templates\base.htm
 Criar arquivo index.html (Section_11_Geolocalização\geo\core\templates\index.html):
 
 ```html
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 
 {% block content %}
     <div class="row">
-        <div class="col-md-6">
-            <form autocomplete="off" action="{% url 'index' %} ">
+        <div class="col-sm-6">
+            <form autocomplete="off" action="{% url 'index' %}">
                 {% csrf_token %}
                 <div class="form-group">
-                    <h1><a href="{% url 'index' %}"> Buscador Geek</a></h1>
-                    <h4>[ {{ city }} {% if country %} - {{ country }} </h4>
+                    <h1><a href="{% url 'index' %}">Buscador Geek</a></h1>
+                    <h4>[{{ city }} {% if country %} - {{ country }} {% endif %}]</h4>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="key" placeholder="Digite um termo para busca (obrigatório)" required>
-                    <small id="keyhelp" class="form-text text-muted">Exemplo: Mexican Food, Brasilian Food</small>
+                    <input class="form-control" type="text" name="key" placeholder="Digite um termo para busca (obrigatório)" required/>
+                    <small id="keyHelp" class="form-text text-muted">Exemplo: Mexican Food, Brazilian Food, Asian Food</small>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="loc" placeholder="Digite uma cidade para efetuar a busca (obrigatório)" >
+                    <input class="form-control" type="text" name="loc" placeholder="Digite uma cidade para efetuar a busca"/>
                     <small id="keyLoc" class="form-text text-muted">Exemplo: Vancouver, Madrid, Mexico City</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Buscar</button>
-                </form>
-                {% if 'error' in items %}
-                    <h1>Nenhum estabelecimento encontrado em {{ cidade }} </h1>
-                {% elif busca and itens.businesses|length < 1 %}
-                    <h1>Nada encontrado sobre o termo buscado</h1>
-                {% elif city and items %}
-                    <h1>Resultado da busca</h1>
-                    {% for biz in items.businesses %}
-                        <span class="text-info"> {{ biz.name }}, {{ city }} <br> </span>
-                    {% endfor %}
-                {% endif %}
+            </form>
+            {% if 'error' in items %}
+                <h1>Nenhum estabelecimento encontrado em {{ city }}</h1>
+            {% elif busca and items.businesses|length < 1 %}
+                <h1>Nada encontrado sobre o termo buscado</h1>
+            {% elif city and items %}
+                <h1>Resultado da Busca</h1>
+                {% for biz in items.businesses %}
+                    <span class="text-info">{{ biz.name }}, {{ city }}</span><br/>
+                {% endfor %}
+            {% endif %}
         </div>
-        {% if city and items %}
+        {% if city and items|length > 1 %}
             {% include 'maps.html' %}
         {% endif %}
 {% endblock %}
+
 ```
 
 Criar arquivo maps.html (Section_11_Geolocalização\geo\core\templates\maps.html):
 
 ```html
 <div class="col-sm-6">
-    <h3 class="text-primary">Localidade</h3>
+    <h3 class="text-primary">Localidades</h3>
     <div id="mapDiv" class="gmap"></div>
 </div>
 </div>
-
 <script>
-    var lat = {{ items.businesses.0.coordinates.latitude | safe }}; 
-    var lon = {{ items.businesses.0.coordinates.longitude | safe }}; 
+    var lat = {{ items.businesses.0.coordinates.latitude | safe }};
+    var lon = {{ items.businesses.0.coordinates.longitude | safe }};
 
-    var map = L.map('mapDiv').setView([lat, lon], 13); // 0 até 18
+    var map = L.map('mapDiv').setView([lat, lon], 13); //0 até 18
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
@@ -99,10 +99,12 @@ Criar arquivo maps.html (Section_11_Geolocalização\geo\core\templates\maps.htm
     }).addTo(map);
 
     {% for biz in items.businesses %}
-        var marker = L.marker([ {{ biz.coordinates.latitude | safe }}, {{ biz.coordinates.longitude | safe }}]).addTo(map);
+        var marker = L.marker([{{ biz.coordinates.latitude | safe}}, {{ biz.coordinates.longitude | safe}}]).addTo(map);
 
-        marker.bindPopup("<b>{{ biz.name }}</b><br/>{{ biz.location.display_address.0 }} {{ biz.location.display_address.1 }} <br/> {{ city }}").openPopup();
+        marker.bindPopup("<b>{{ biz.name }}</b><br/>{{ biz.location.display_address.0 }} {{ biz.location.display_address.1 }}<br/>{{ city }}").openPopup();
+    {% endfor %}
+
+
 </script>
-
 ```
 
