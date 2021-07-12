@@ -7,3 +7,6 @@ Section_10_Trabalhando_com_Aplicações_em_tempo_real/Projeto/venv/*
 Section_10_Trabalhando_com_Aplicações_em_tempo_real/Projeto/chat/__pycache__/*
 Section_10_Trabalhando_com_Aplicações_em_tempo_real/Projeto/realtime/__pycache__
 Section_11_Geolocalização/geo/venv/*
+Section_12_Bonus/Aula_1_charts/venv/*
+Section_12_Bonus/Aula_1_charts/charts/core/__pycache__/*
+Section_12_Bonus/Aula_1_charts/charts/core/migrations/*
