@@ -13,3 +13,4 @@ Section_12_Bonus/Aula_1_charts/charts/core/migrations/*
 Section_12_Bonus/Aula_2_relatorio_pdf/venv*
 Section_12_Bonus/Aula_2_relatorio_pdf/relatorio/core/__pycache__/*
 Section_12_Bonus/Aula_2_relatorio_pdf/relatorio/db.sqlite3
+Section_12_Bonus/Aula_3_Segurança_django/venv/*
