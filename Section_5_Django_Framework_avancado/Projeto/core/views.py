@@ -14,7 +14,7 @@ class IndexView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-        lang = translation.get_language() 
+        lang = translation.get_language()
         context['services'] = Service.objects.order_by('?').all()
         context['team'] = Team.objects.order_by('?').all()
         context['lang'] = lang #

@@ -1,7 +1,7 @@
 # Precisa fazer login com Facebook na sua aplicação? Vamos lá
 
 - Criar ambiente virtual 
-- Instalar django, social-auth-app-django, bootstrap4
+- Instalar django,  social-auth-app-django, django-bootstrap4
 - criar projeto facebook.
 - Configurar o settings.py como nos projetos anteriores.
 
@@ -120,7 +120,7 @@ Criar pagina html - Section_12_Bonus\Aula_4_login_facebook\core\templates\login.
 <div class="row">
     <div class="col-md-8 mx-auto social-container my-2 order-md-1">
         <button class="btn btn-primary mb-2">
-            <a href="#">Login com Facebook</a>
+            <a href="{% url 'social:begin' 'facebook' %}">Login com Facebook</a>
         </button>
     </div>
 </div>
@@ -132,4 +132,143 @@ Criar pagina html - Section_12_Bonus\Aula_4_login_facebook\core\templates\index.
 
 ```html
 
+
+{% extends 'base.html' %}
+{% block title %}Início{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-12 mb-3">
+        <h4 class="text-center">Bem-vindo(a) {{ user.username }} </h4>
+    </div>
+
+    {% for a in backends.associated %}
+        {% if a.provider == 'facebook' %}
+            <div class="col-md-4 text-center">
+                <img src="{{ a.extra_data.picture.data.url }}" alt="" width="130" height="130" style="border-radius: 50%;">
+            </div>
+            <div class="col-md-8 social-container my-2">
+                <p>Logado via: {{ a.provider|title }}</p>
+                <p>Nome: {{ a.extra_data.name }}</p>
+                <p>Profile: <a href="{{ a.extra_data.profile_url }}">Link</a></p>
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class="col-sm-12 mt-2 text-center">
+        <button class="btn btn-warning">
+            <a href="{% url 'logout' %}">Logout</a>
+        </button>
+    </div>
+</div>
+{% endblock %}
 ```
+
+- Criar o diretório static\css (Section_12_Bonus\Aula_4_login_facebook\core\static\css) e criar dentro dele o arquivo style.css
+
+```css
+
+img {
+    border: 3px solid #282c34;
+}
+
+.container-fluid {
+    height: 100vh;
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fluid > div {
+    width: 85%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.card {
+    width: 100%;
+}
+
+.social-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn a, .btn a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+```
+
+Em Section_12_Bonus\Aula_4_login_facebook\core\views.py:
+
+```python
+
+from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+class IndexView(LoginRequiredMixin, TemplateView):
+    template_name = 'index.html'
+class LoginView(TemplateView):
+    template_name = 'login.html'
+
+```
+
+Em Section_12_Bonus\Aula_4_login_facebook\facebook\urls.py:
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('core.urls')),
+]
+```
+
+Criar um arquivo urls.py (Section_12_Bonus\Aula_4_login_facebook\core\urls.py) contendo:
+
+```python
+from django.urls import path, include
+from django.contrib.auth import views as auth_views
+
+from core.views import IndexView, LoginView
+
+urlpatterns = [
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('social-auth/', include('social_django.urls', namespace='social')),
+    path('', IndexView.as_view(), name='index'),
+]
+
+```
+
+Em settings.py (Section_12_Bonus\Aula_4_login_facebook\facebook\settings.py):
+
+```python
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
+
+# Configurações para facebook
+
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+
+SOCIAL_AUTH_FACEBOOK_KEY = '' # ID do aplicativo
+SOCIAL_AUTH_FACEBOOK_SECRET = ''
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email, picture.type(large), link'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA =[
+    ('name', 'name'), 
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+]
+```
+
+
